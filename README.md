@@ -1,24 +1,18 @@
-# README
+# README du Jour 37: Animations de BGs avec jQuery #
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Cet exercice c'est fait en équipe. Pour faire simple: ##
 
-Things you may want to cover:
+## On a divisé le travail en deux blocs: ##
 
-* Ruby version
+* Le header avec le caroussel avec les boutons et les petits points pour connaitre la position.
 
-* System dependencies
+* Et l'index avec la partie avec les onglets animés avec JS.
 
-* Configuration
+Sachant que l'exercice du jour ne portait pas la dessus et pour se facilité un peu le travail, on est parti sur un __Template__ de startbootstrap intégré avec la [gem frontend-generators](https://github.com/MrPowers/frontend-generators).
 
-* Database creation
+## Lien heroku de notre application: https://ladding-resto.herokuapp.com/
 
-* Database initialization
+__Made by Team/Bordeaux/Session-3__
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* 
