@@ -62,21 +62,70 @@ function slideImg(){
     $currentImg = $img.eq(i);
     $currentImg.css('display', 'block');
     slideImg(); // on oublie pas de relancer la fonction à la fin
-    }, 7000); // on définit l'intervalle à 7000 millisecondes (7s)
+    }, 4000); // on définit l'intervalle à 7000 millisecondes (7s)
 }
 slideImg(); // enfin, on lance la fonction une première fois
 
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 
+var $points = $('#points'),
+    $p = $('#points p'),
+    indexp = $p.length - 1,
+    i = 0,
+    $currentp = $p.eq(i);
 
+$p.css('color', '#F22D40');
+$currentp.css('color', 'white');
+$('.next').click(function(){ 
+    i++;
+    if( i <= indexp ){
+        $p.css('color', '#F22D40');
+        $currentp = $p.eq(i);
+        $currentp.css('color', 'white');
+    }
+    else{
+        i = indexp;
+    }
+});
+
+$('.prev').click(function(){
+    i--;
+    if( i >= 0 ){
+        $p.css('color', '#F22D40');
+        $currentp = $p.eq(i);
+        $currentp.css('color', 'white');
+    }
+    else{
+        i = 0;
+    }
+});
+
+function slidepe(){
+    setTimeout(function(){ 
+        if(i < indexp){ 
+        i++; 
+    }
+    else{ 
+        i = 0;
+    }
+    $p.css('color', '#F22D40');
+    $currentp = $p.eq(i);
+    $currentp.css('color', 'white');
+    slidepe();
+    }, 4000); 
+}
+slidepe();
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
 
     $('#presentation').on("click", function () {
         $('#textepresentation').show();
         $('#textemenu').hide();
         $('#textelorem').hide();
         $('#presentation').css("background-color","white");
-        $('#menu').css("background-color","light-grey");
-        $('#lorem').css("background-color","grey");
+        $('#menu').css("background-color","light-#F22D40");
+        $('#lorem').css("background-color","#F22D40");
         }
         );
 
@@ -84,9 +133,9 @@ slideImg(); // enfin, on lance la fonction une première fois
         $('#textepresentation').hide();
         $('#textemenu').show();
         $('#textelorem').hide();
-        $('#presentation').css("background-color","grey");
+        $('#presentation').css("background-color","#F22D40");
         $('#menu').css("background-color","white");
-        $('#lorem').css("background-color","grey");
+        $('#lorem').css("background-color","#F22D40");
         }
         );
 
@@ -94,8 +143,8 @@ slideImg(); // enfin, on lance la fonction une première fois
         $('#textepresentation').hide();
         $('#textemenu').hide();
         $('#textelorem').show();
-        $('#presentation').css("background-color","grey");
-        $('#menu').css("background-color","grey");
+        $('#presentation').css("background-color","#F22D40");
+        $('#menu').css("background-color","#F22D40");
         $('#lorem').css("background-color","white");
         }
         );
