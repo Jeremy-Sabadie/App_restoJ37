@@ -17,7 +17,7 @@
 //= require_tree .
 $(document).ready(function(){
 
-//alert("Salut toi!")
+alert("Salut toi!")
 var $carrousel = $('#carrousel'), // on cible le bloc du carrousel
     $img = $('#carrousel img'), // on cible les images contenues dans le carrousel
     indexImg = $img.length - 1, // on définit l'index du dernier élément

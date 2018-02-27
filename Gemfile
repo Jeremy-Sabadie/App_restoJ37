@@ -14,6 +14,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'frontend-generators'
+gem 'bootstrap'
 
 group :development, :test do
   gem 'sqlite3'
