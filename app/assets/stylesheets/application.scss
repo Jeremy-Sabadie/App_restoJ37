@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require bootstrap
+ */
+
+ @import "bootstrap";
+
+#carrousel{
+	position:relative;
+	width:1500px;
+	height:239px;
+	background-color:#ffffff;
+	background-position:top;
+	background-repeat:no-repeat;
+}
+
+.site-heading{
+	display: flex;
+	justify-content: space-between;
+	margin-top: -100px;
+}
+ 
+
+
+.prev{
+	float: left;
+
+}
+ 
+
+
+.suiv{
+	float: right;
+}
+
+
+
+#tableau {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.onglets {
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    
+}
+.nomonglets {
+    display: flex;
+    background-color: grey;
+    justify-content: space-around;
+}
+.nomonglets h4 {
+    padding: 15px;
+    margin-bottom: 0;
+    width: 34%;
+    text-align: center; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.nomonglets h4:hover {
+    background-color: white;
+}
+#presentation {
+    background-color: white;
+}
+.texte {
+    margin-top: 0;
+    background-color: white;
+    border-radius: .25rem;
+    padding: 90px;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border : solid;
+}
+#textemenu {
+    display: none;
+}
+#textelorem {
+    display: none;
+}
+#textpresentation {
+}
