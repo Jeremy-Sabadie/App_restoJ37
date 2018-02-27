@@ -88,6 +88,9 @@ GEM
       railties (>= 3.0.0)
     ffi (1.9.23)
     formatador (0.2.5)
+    frontend-generators (0.2.0)
+      rainbow (= 2.0.0)
+      turf (= 0.0.5)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     guard (2.14.2)
@@ -182,6 +185,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    rainbow (2.0.0)
     rake (12.3.0)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
@@ -249,6 +253,7 @@ GEM
     turbolinks (5.1.0)
       turbolinks-source (~> 5.1)
     turbolinks-source (5.1.0)
+    turf (0.0.5)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.1.6)
@@ -278,6 +283,7 @@ DEPENDENCIES
   database_cleaner
   devise
   factory_bot_rails
+  frontend-generators
   guard-rspec
   jbuilder
   jquery-rails
