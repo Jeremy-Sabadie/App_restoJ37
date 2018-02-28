@@ -24,27 +24,14 @@ var $carrousel = $('#carrousel'), // on cible le bloc du carrousel
     i = 0, // on initialise un compteur
     $currentImg = $img.eq(i); // enfin, on cible l'image courante, qui possède l'index i (0 pour l'instant)
 
-var $points = $('#points'),
-    $p = $('#points p'),
-    indexImg = $p.length - 1,
-    i = 0,
-    $currentp = $p.eq(i);
-
 $img.css('display', 'none'); // on cache les images
 $currentImg.css('display', 'block'); // on affiche seulement l'image courante
-
-$p.css('color', '#F22D40');
-$currentp.css('color', 'white');
-
 $('.next').click(function(){ // image suivante
     i++; // on incrémente le compteur
     if( i <= indexImg ){
         $img.css('display', 'none'); // on cache les images
         $currentImg = $img.eq(i); // on définit la nouvelle image
         $currentImg.css('display', 'block'); // puis on l'affiche
-        $p.css('color', '#F22D40');
-        $currentp = $p.eq(i);
-        $currentp.css('color', 'white');
     }
     else{
         i = indexImg;
@@ -57,9 +44,6 @@ $('.prev').click(function(){ // image précédente
         $img.css('display', 'none');
         $currentImg = $img.eq(i);
         $currentImg.css('display', 'block');
-        $p.css('color', '#F22D40');
-        $currentp = $p.eq(i);
-        $currentp.css('color', 'white');
     }
     else{
         i = 0;
@@ -77,9 +61,6 @@ function slideImg(){
     $img.css('display', 'none');
     $currentImg = $img.eq(i);
     $currentImg.css('display', 'block');
-    $p.css('color', '#F22D40');
-    $currentp = $p.eq(i);
-    $currentp.css('color', 'white');
     slideImg(); // on oublie pas de relancer la fonction à la fin
     }, 4000); // on définit l'intervalle à 7000 millisecondes (7s)
 }
@@ -88,10 +69,53 @@ slideImg(); // enfin, on lance la fonction une première fois
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 
+var $points = $('#points'),
+    $p = $('#points p'),
+    indexp = $p.length - 1,
+    i = 0,
+    $currentp = $p.eq(i);
 
+$p.css('color', '#F22D40');
+$currentp.css('color', 'white');
+$('.next').click(function(){ 
+    i++;
+    if( i <= indexp ){
+        $p.css('color', '#F22D40');
+        $currentp = $p.eq(i);
+        $currentp.css('color', 'white');
+    }
+    else{
+        i = indexp;
+    }
+});
 
+$('.prev').click(function(){
+    i--;
+    if( i >= 0 ){
+        $p.css('color', '#F22D40');
+        $currentp = $p.eq(i);
+        $currentp.css('color', 'white');
+    }
+    else{
+        i = 0;
+    }
+});
 
-
+function slidepe(){
+    setTimeout(function(){ 
+        if(i < indexp){ 
+        i++; 
+    }
+    else{ 
+        i = 0;
+    }
+    $p.css('color', '#F22D40');
+    $currentp = $p.eq(i);
+    $currentp.css('color', 'white');
+    slidepe();
+    }, 4000); 
+}
+slidepe();
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
